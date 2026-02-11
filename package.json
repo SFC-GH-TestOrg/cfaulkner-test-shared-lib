@@ -1,0 +1,6 @@
+{
+  "name": "@sfc-gh-testorg/cfaulkner-test-shared-lib",
+  "version": "1.0.0",
+  "description": "Shared library for testing cross-repo impact analyzer",
+  "main": "src/index.js"
+}
