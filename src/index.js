@@ -7,4 +7,6 @@ export function parseConfig(config) {
   return JSON.parse(config);
 }
 
-export const VERSION = '1.0.0';
+export const VERSION = '2.0.0';
+// Added new utility
+// Another change
