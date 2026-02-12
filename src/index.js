@@ -8,3 +8,4 @@ export function parseConfig(config) {
 }
 
 export const VERSION = '1.0.0';
+export const NEW_CONST = 'test';
