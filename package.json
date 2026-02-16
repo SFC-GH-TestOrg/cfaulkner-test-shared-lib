@@ -1,6 +1,24 @@
 {
   "name": "@sfc-gh-testorg/cfaulkner-test-shared-lib",
-  "version": "1.0.0",
-  "description": "Shared library for testing cross-repo impact analyzer",
-  "main": "src/index.js"
+  "version": "2.0.0",
+  "description": "Shared utility library for SFC-GH-TestOrg services - provides common formatting, parsing, validation, and logging functionality",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": [
+    "sfc-gh-testorg",
+    "shared-lib",
+    "utilities",
+    "formatting",
+    "validation",
+    "logging"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SFC-GH-TestOrg/cfaulkner-test-shared-lib"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "author": "SFC-GH-TestOrg",
+  "license": "MIT"
 }
