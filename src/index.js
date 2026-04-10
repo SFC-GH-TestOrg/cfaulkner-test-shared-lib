@@ -32,7 +32,7 @@ export function parseConfig(config) {
   return parsed;
 }
 
-export function validateInput(input, schema) {
+export function validateInput(input, schema, options = {}) {
   if (!schema || typeof schema !== 'object') {
     throw new Error('Schema is required');
   }
@@ -73,7 +73,20 @@ export class Logger {
   error(message, meta) { this._log('error', message, meta); }
 }
 
-export const VERSION = '2.0.0';
+export function deepMerge(target, source) {
+  if (typeof target !== 'object' || typeof source !== 'object') {
+    throw new TypeError('Both arguments must be objects');
+  }
+  const result = { ...target };
+  for (const [key, value] of Object.entries(source)) {
+    result[key] = typeof value === 'object' && value !== null && !Array.isArray(value)
+      ? deepMerge(target[key] || {}, value)
+      : value;
+  }
+  return result;
+}
+
+export const VERSION = '3.0.0';
 
 export default {
   formatDate,
