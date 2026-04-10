@@ -73,7 +73,14 @@ export class Logger {
   error(message, meta) { this._log('error', message, meta); }
 }
 
-export const VERSION = '2.0.0';
+export function formatCurrency(amount, currency = 'USD') {
+  if (typeof amount !== 'number') {
+    throw new TypeError('Amount must be a number');
+  }
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount);
+}
+
+export const VERSION = '2.1.0';
 
 export default {
   formatDate,
