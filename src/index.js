@@ -80,7 +80,7 @@ export function formatCurrency(amount, currency = 'USD') {
   return new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(amount);
 }
 
-export const VERSION = '2.3.0';
+export const VERSION = '2.4.0';
 
 export default {
   formatDate,
